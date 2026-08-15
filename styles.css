@@ -41,6 +41,27 @@ header.site{position:sticky; top:0; z-index:10; background:rgba(14,17,22,.9);
 .badge{display:inline-flex; align-items:center; gap:8px; background:var(--card);
   border:1px solid var(--divider); border-radius:14px; padding:12px 18px; color:var(--text); font-weight:600}
 .badge small{display:block; color:var(--dim); font-weight:400; font-size:11px}
+a.badge{transition:border-color .15s, transform .15s}
+a.badge:hover{text-decoration:none; border-color:var(--gold); transform:translateY(-1px)}
+
+/* Secondary hero button (open online catalog) */
+.badge.ghost{background:transparent; border-color:var(--gold)}
+.badge.ghost b{color:var(--gold-light)}
+.hero .subnote{color:var(--dim); font-size:13px; margin:16px 0 0}
+
+/* Screenshots showcase */
+.shots{display:flex; gap:18px; overflow-x:auto; padding:8px 22px 30px; scroll-snap-type:x mandatory;
+  -webkit-overflow-scrolling:touch; scrollbar-width:none}
+.shots::-webkit-scrollbar{display:none}
+.shots .shot{flex:0 0 auto; width:236px; scroll-snap-align:center}
+.shots .shot img{width:100%; display:block; border-radius:26px; border:1px solid var(--divider);
+  box-shadow:0 18px 50px rgba(0,0,0,.45)}
+.section-title{text-align:center; font-size:15px; letter-spacing:2px; text-transform:uppercase;
+  color:var(--gold-light); margin:44px 0 4px}
+.section-sub{text-align:center; color:var(--muted); margin:0 auto 20px; max-width:560px}
+@media (min-width:900px){
+  .shots{justify-content:center; flex-wrap:wrap; overflow:visible}
+}
 
 /* Features */
 .features{display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:16px; padding:24px 0 60px}
@@ -61,6 +82,13 @@ header.site{position:sticky; top:0; z-index:10; background:rgba(14,17,22,.9);
 .page .note{background:var(--surface); border:1px solid var(--divider); border-left:3px solid var(--gold);
   border-radius:12px; padding:14px 16px; margin:0 0 16px; color:var(--muted); font-size:15px}
 .page .contact{margin-top:34px; padding-top:22px; border-top:1px solid var(--divider); color:var(--muted); font-size:15px}
+
+/* Social row */
+.social{display:flex; gap:12px; justify-content:center; flex-wrap:wrap; padding:8px 0 64px}
+.social a{display:inline-flex; align-items:center; gap:8px; background:var(--card);
+  border:1px solid var(--divider); border-radius:12px; padding:10px 18px; color:var(--text);
+  font-weight:600; font-size:14px; transition:border-color .15s, transform .15s}
+.social a:hover{text-decoration:none; border-color:var(--gold); transform:translateY(-1px)}
 
 /* Footer */
 footer.site{border-top:1px solid var(--divider); padding:30px 0 54px; color:var(--dim); font-size:13px}
