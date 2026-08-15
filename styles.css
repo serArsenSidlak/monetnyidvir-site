@@ -44,6 +44,12 @@ header.site{position:sticky; top:0; z-index:10; background:rgba(14,17,22,.9);
 a.badge{transition:border-color .15s, transform .15s}
 a.badge:hover{text-decoration:none; border-color:var(--gold); transform:translateY(-1px)}
 
+/* Official store badges (фирменные кнопки скачивания) */
+.store-badges{display:flex; gap:14px; justify-content:center; flex-wrap:wrap; align-items:center; margin-top:6px}
+.store-badge{display:inline-block; transition:transform .15s, opacity .15s; line-height:0}
+.store-badge:hover{transform:translateY(-2px); opacity:.92}
+.store-badge img{height:54px; width:auto; display:block}
+
 /* Secondary hero button (open online catalog) */
 .badge.ghost{background:transparent; border-color:var(--gold)}
 .badge.ghost b{color:var(--gold-light)}
